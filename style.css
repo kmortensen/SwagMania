@@ -1,72 +1,106 @@
 #menu {
-    width: 100%;
-    height: 50px;
-    position: fixed; 
-    background-color: #366b82;
-    margin: 0; /* Ensures there is no space between sides of the screen and the menu */
-    z-index: 98; /* Makes sure that your menu remains on top of other page elements */
+    width: 98%;
+    height: 100px;
+    position: fixed;
+    left: 1%;
+    background-image: url('menubackground.png');
+    background-size:cover;
+    background-color: transparent;
+    margin: 0;
+    z-index: 98;
+    border-bottom: dotted black thin;
 }
-
 #menuLeft {
-    width: 70%; /* Spans the width of the page */
-    height: 50px; 
-    margin: 0; /* Ensures there is no space between sides of the screen and the menu */
-    z-index: 99; /* Makes sure that your menu remains on top of other page elements */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 150px;
+}
+#menuLeft img {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+#menuMiddle {
+    position: absolute;
+    bottom: 0;
+    left: 110px;
+    width: 500px;
+    height: 40px; 
+    margin: 0;
+    z-index: 99;
 }
 
-#menuLeft ul
-{
+#menuMiddle ul {
     list-style-type:none;
     margin:0;
     padding:0;
 }
-#menuLeft ul li
-{
-    margin-left: 5%;
-    margin-top: 12px;
-    width: 20%;
+#menuMiddle ul li {
+    background-color: white;
+    margin-left: 5px;
+    margin-top: 5px;
+    width: 120px;
+    height: 30px;
     float:left;
+    border: solid black thin;
 }
-#menuLeft ul a
-{
-    font-weight: bold;
+#menuMiddle ul a {
+    text-align:center;
+    font-weight: lighter;
     font-size: auto;
     display:block;
-    color: white;
+    color: black;
     text-decoration: none;
 }
-#menuLeft ul li ul
-{
+#menuMiddle ul li ul {
     display: none;
-    margin-left: -5%;
+    margin-left: 0;
     height: auto;							
-    margin-top: 20px;
+    margin-top: 10px;
     padding: 0;
-    width: auto;
-    border: solid black;
 }
-#menuLeft ul li:hover ul
-{
+#menuMiddle ul li:hover ul {
     display: block; /* Displays the drop-down box when the menu item is hovered over */
 }
-#menuLeft ul li ul li
-{
+#menuMiddle ul li ul li {
     margin: 0;
     float: none;
-    width: auto;
-    background-color: red;
+    width: 100%;
+    background-color: white;
+    border: none;
+    border-bottom: dotted black thin;
 }
-#menuLeft ul li:hover ul li a
-{
+#menuMiddle ul li:hover ul li a {
     color: black;
 }
-
-#menuRight
-{
-    position: absolute: 70% 30%;
-    left: 70%;
-    width: 30%;
-    height: 50px;
+#menuRight {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    width: 100px;
+    height: 32px;
     z-index: 99;
-    background-color: yellow;
+}
+#menuRight table {
+    position: absolute;
+    right: 0;
+    border: none;
+    border-collapse: collapse;
+    height: 100%;
+}
+#menuRight table tr td img {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+#gallary {
+    position: absolute;
+    top: 110px;
+    left: 110px;
 }
