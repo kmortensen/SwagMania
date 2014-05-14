@@ -1,8 +1,9 @@
 #menu {
-    width: 98%;
+    top: 0;
+    right: 5px;
     height: 100px;
     position: fixed;
-    left: 1%;
+    left: 5px;
     background-image: url('menubackground.png');
     background-size:cover;
     background-color: transparent;
@@ -49,18 +50,24 @@
     border: solid black thin;
 }
 #menuMiddle ul a {
+    height: 26px;
+    padding-top: 4px;
     text-align:center;
+    vertical-align:middle;
     font-weight: lighter;
     font-size: auto;
     display:block;
     color: black;
     text-decoration: none;
 }
+#menuMiddle ul a:hover {
+    background-color:lightgray;
+}
 #menuMiddle ul li ul {
     display: none;
     margin-left: 0;
     height: auto;							
-    margin-top: 10px;
+    margin-top: 0px;
     padding: 0;
 }
 #menuMiddle ul li:hover ul {
@@ -103,4 +110,25 @@
     position: absolute;
     top: 110px;
     left: 110px;
+}
+#text {
+    position: absolute;
+    right: 10px;
+    height: auto;
+    left: 830px;
+    top: 110px;
+    z-index: 1;
+}
+
+#bottommenu {
+    position: fixed;
+    width: 45%;
+    height: 20px;
+    bottom: 0;
+    z-index: 1;
+    background-color: white;
+    opacity: 0.95;
+    border-top: solid honeydew;
+    font-family: sans-serif;
+    text-align: center;
 }
