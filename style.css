@@ -1,22 +1,22 @@
 #menu {
-    top: 0;
-    right: 5px;
-    height: 100px;
-    position: fixed;
-    left: 5px;
-    background-image: url('menubackground.png');
-    background-size:cover;
-    background-color: transparent;
-    margin: 0;
-    z-index: 98;
-    border-bottom: dotted black thin;
-}
-#menuLeft {
+    width: 100%;
+    min-width: 600px;
     position: absolute;
     top: 0;
     left: 0;
+    height: 100px;
+    background-image: url('menubackground.png');
+    background-size: cover;
+    margin: 0;
+    z-index: 99;
+    border-bottom: dotted black thin;
+}
+#menuLeft {
+    position: inherit;
+    top: 0;
+    left: 0;
     width: 100px;
-    height: 150px;
+    height: 100px;
 }
 #menuLeft img {
     width: 100%;
@@ -29,10 +29,9 @@
     position: absolute;
     bottom: 0;
     left: 110px;
-    width: 500px;
+    width: 490px;
     height: 40px; 
     margin: 0;
-    z-index: 99;
 }
 
 #menuMiddle ul {
@@ -41,24 +40,27 @@
     padding:0;
 }
 #menuMiddle ul li {
-    background-color: white;
+    background-color: #E2E2E2;
     margin-left: 5px;
-    margin-top: 5px;
+    margin-top: 3px;
     width: 120px;
     height: 30px;
     float:left;
     border: solid black thin;
 }
+#menuMiddle ul li:hover {
+    border: solid white thin;
+}
 #menuMiddle ul a {
-    height: 26px;
-    padding-top: 4px;
+    height: 25px;
+    padding-top: 5px;
     text-align:center;
     vertical-align:middle;
-    font-weight: lighter;
-    font-size: auto;
     display:block;
-    color: black;
     text-decoration: none;
+    font-family:Georgia,serif;
+    color:#4E443C;
+    font-variant: small-caps; text-transform: none; font-weight: 100; margin-bottom: 0;
 }
 #menuMiddle ul a:hover {
     background-color:lightgray;
@@ -67,11 +69,11 @@
     display: none;
     margin-left: 0;
     height: auto;							
-    margin-top: 0px;
+    margin-top: -1px;
     padding: 0;
 }
 #menuMiddle ul li:hover ul {
-    display: block; /* Displays the drop-down box when the menu item is hovered over */
+    display: block;
 }
 #menuMiddle ul li ul li {
     margin: 0;
@@ -81,16 +83,17 @@
     border: none;
     border-bottom: dotted black thin;
 }
-#menuMiddle ul li:hover ul li a {
-    color: black;
+#menuMiddle ul li ul li:hover {
+    background-color: white;
+    border: none;
+    border-bottom: dotted black thin;
 }
 #menuRight {
     position: absolute;
-    bottom: 5px;
+    top: 5px;
     right: 5px;
     width: 100px;
     height: 32px;
-    z-index: 99;
 }
 #menuRight table {
     position: absolute;
@@ -106,29 +109,68 @@
     margin: 0;
     border: none;
 }
-#gallary {
-    position: absolute;
-    top: 110px;
-    left: 110px;
-}
 #text {
     position: absolute;
-    right: 10px;
     height: auto;
-    left: 830px;
+    left: 730px;
     top: 110px;
     z-index: 1;
 }
 
 #bottommenu {
-    position: fixed;
-    width: 45%;
-    height: 20px;
+    position: absolute;
+    width: 100%;
+    min-width: 600px;
+    height: 25px;
     bottom: 0;
-    z-index: 1;
+    z-index: 99;
     background-color: white;
     opacity: 0.95;
-    border-top: solid honeydew;
+    border-top: solid lightgray;
     font-family: sans-serif;
+    border-top-width: 1px;
+    overflow: hidden;
+    
+}
+#bottommenu table {
+    position: absolute;
+    width: 100%;
+}
+#bottommenu tr td {
+    width: 200px;
     text-align: center;
+}
+#gallery {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    min-width: 600px;
+    bottom: 25px;
+    overflow-style: auto;
+    overflow-x: auto;
+    overflow-y: auto;
+    z-index: 94;
+}
+#gallery table {
+    min-width: 480px;
+    position: absolute;
+    left: 100px;
+    border-collapse: separate;
+    border-spacing: 15px;
+}
+#gallery table tr {
+    height: auto;
+}
+#gallery table tr td {
+    width: 150px;
+}
+#gallery table tr td img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+#gallery table tr td:hover img {
+    border: solid black;
+    border-width: 1px;
 }
