@@ -1,72 +1,202 @@
 #menu {
     width: 100%;
-    height: 50px;
-    position: fixed; 
-    background-color: #366b82;
-    margin: 0; /* Ensures there is no space between sides of the screen and the menu */
-    z-index: 98; /* Makes sure that your menu remains on top of other page elements */
+    min-width: 600px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100px;
+    background-image: url('menubackground.png');
+    background-size: cover;
+    margin: 0;
+    z-index: 99;
+    border-bottom: dotted black thin;
 }
-
 #menuLeft {
-    width: 70%; /* Spans the width of the page */
-    height: 50px; 
-    margin: 0; /* Ensures there is no space between sides of the screen and the menu */
-    z-index: 99; /* Makes sure that your menu remains on top of other page elements */
+    position: inherit;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+}
+#menuLeft img {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+#menuMiddle {
+    position: absolute;
+    bottom: 0;
+    left: 110px;
+    width: 590px;
+    height: 40px; 
+    margin: 0;
 }
 
-#menuLeft ul
-{
+#menuMiddle ul {
     list-style-type:none;
     margin:0;
     padding:0;
 }
-#menuLeft ul li
-{
-    margin-left: 5%;
-    margin-top: 12px;
-    width: 20%;
+#menuMiddle ul li {
+    background-color: #E2E2E2;
+    margin-left: 5px;
+    margin-top: 3px;
+    width: 120px;
+    height: 30px;
     float:left;
+    border: solid black thin;
 }
-#menuLeft ul a
-{
-    font-weight: bold;
-    font-size: auto;
+#menuMiddle ul li:hover {
+    border: solid white thin;
+}
+#menuMiddle ul a {
+    height: 25px;
+    padding-top: 5px;
+    text-align:center;
+    vertical-align:middle;
     display:block;
-    color: white;
     text-decoration: none;
+    font-family:Georgia,serif;
+    color:#4E443C;
+    font-variant: small-caps; text-transform: none; font-weight: 100; margin-bottom: 0;
 }
-#menuLeft ul li ul
-{
+#menuMiddle ul a:hover {
+    background-color:lightgray;
+}
+#menuMiddle ul li ul {
     display: none;
-    margin-left: -5%;
+    margin-left: 0;
     height: auto;							
-    margin-top: 20px;
+    margin-top: -1px;
     padding: 0;
-    width: auto;
-    border: solid black;
 }
-#menuLeft ul li:hover ul
-{
-    display: block; /* Displays the drop-down box when the menu item is hovered over */
+#menuMiddle ul li:hover ul {
+    display: block;
 }
-#menuLeft ul li ul li
-{
+#menuMiddle ul li ul li {
     margin: 0;
     float: none;
-    width: auto;
-    background-color: red;
+    width: 100%;
+    background-color: white;
+    border: none;
+    border-bottom: dotted black thin;
 }
-#menuLeft ul li:hover ul li a
-{
-    color: black;
+#menuMiddle ul li ul li:hover {
+    background-color: white;
+    border: none;
+    border-bottom: dotted black thin;
+}
+#menuRight {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 100px;
+    height: 32px;
+}
+#menuRight table {
+    position: absolute;
+    right: 0;
+    border: none;
+    border-collapse: collapse;
+    height: 100%;
+}
+#menuRight table tr td img {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+#middle {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    min-width: 800px;
+    bottom: 0px;
+    overflow-style: auto;
+    overflow-x: auto;
+    overflow-y: auto;
+    z-index: 94;
+}
+#sliderFrame {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    width: 600px;
+    height: 500px;
+}
+#text {
+    position: absolute;
+    top: 10px;
+    left: 610px;
+    min-height: 525px;
+    width: calc(100%-70px);
+    height: calc(100%-40px);
+    min-width: 190px;
+    //bottom: 25px;
+    overflow-style: auto;
+    overflow-x: auto;
+    overflow-y: auto;
+    z-index: 94;
 }
 
-#menuRight
-{
-    position: absolute: 70% 30%;
-    left: 70%;
-    width: 30%;
-    height: 50px;
+#bottommenu {
+    position: absolute;
+    width: 100%;
+    min-width: 600px;
+    height: 25px;
+    bottom: 0;
     z-index: 99;
-    background-color: yellow;
+    background-color: white;
+    opacity: 0.95;
+    border-top: solid lightgray;
+    font-family: sans-serif;
+    border-top-width: 1px;
+    overflow: hidden;
+    
+}
+#bottommenu table {
+    position: absolute;
+    width: 100%;
+}
+#bottommenu tr td {
+    width: 200px;
+    text-align: center;
+}
+#gallery {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    min-width: 600px;
+    bottom: 25px;
+    overflow-style: auto;
+    overflow-x: auto;
+    overflow-y: auto;
+    z-index: 94;
+}
+#gallery table {
+    min-width: 480px;
+    position: absolute;
+    left: 100px;
+    border-collapse: separate;
+    border-spacing: 15px;
+}
+#gallery table tr {
+    height: auto;
+}
+#gallery table tr td {
+    width: 150px;
+}
+#gallery table tr td img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+#gallery table tr td:hover img {
+    border: solid black;
+    border-width: 1px;
 }
