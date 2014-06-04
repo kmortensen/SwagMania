@@ -1,0 +1,4 @@
+AuthType Basic  
+AuthName "restricted area"  
+AuthUserFile /customers/c/4/b/carlsbarbershop.dk/httpd.www/secure/.htpasswd
+require valid-user
